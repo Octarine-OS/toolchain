@@ -42,8 +42,20 @@ include("AddProject.cmake")
 
 
 AddProject(gmp)
-AddProject(mpfr DEPEND_LIBS gmp)
-AddProject(mpc DEPEND_LIBS mpfr gmp)
+AddProject(mpfr
+	DEPEND_LIBS
+		gmp
+	CONFIGURE_ARGS
+		--enable-static
+		--disable-shared)
+
+AddProject(mpc
+	DEPEND_LIBS
+		mpfr
+		gmp
+	CONFIGURE_ARGS
+		--enable-static
+		--disable-shared)
 AddProject(isl DEPEND_LIBS gmp)
 #AddProject(nasm)
 
