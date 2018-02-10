@@ -63,7 +63,7 @@ AddProject(binutils
 	MULTI_ARCH
 	DEPEND_LIBS
 		gmp
-	CONFIGURE_ARGS 
+	CONFIGURE_ARGS
 		--with-sysroot
 		--disable-nls
 		--disable-werror
@@ -79,7 +79,7 @@ AddProject(gcc
 		mpc
 	CONFIGURE_ARGS
 		 --disable-nls
-		 --enable-languages=c,c++ 
+		 --enable-languages=c,c++
 		 --without-headers
 	BUILD_TARGETS
 		all-gcc
