@@ -16,8 +16,8 @@ set(GMP_VERSION 6.1.2)
 set(GMP_URL "https://gmplib.org/download/gmp/gmp-${GMP_VERSION}.tar.xz")
 set(GMP_HASH MD5=F58FA8001D60C4C77595FBBB62B63C1D)
 
-set(GCC_VERSION 6.3.0)
-set(GCC_HASH MD5=6e5ea04789678f1250c1b30c4d9ec417)
+set(GCC_VERSION 7.3.0)
+set(GCC_HASH MD5=747d5010b7c6938b480bc6e4d7c4be9a)
 set(GCC_URL ftp://ftp.gnu.org/gnu/gcc/gcc-${GCC_VERSION}/gcc-${GCC_VERSION}.tar.gz)
 
 set(NASM_VERSION 2.12.02)
