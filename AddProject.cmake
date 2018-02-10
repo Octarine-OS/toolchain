@@ -19,7 +19,7 @@ function(AddProject name)
 	# build up list of --with-LIBNAME=XYZ configure args
 	set(CONFIGURE_LIBS )
 	foreach(lib IN LISTS OPT_DEPEND_LIBS)
-		list(APPEND CONFIGURE_LIBS "--with-${lib}=${TOOLCHAIN_INSTALL_DIR}")
+		list(APPEND CONFIGURE_LIBS "--with-${lib}=$<SHELL_PATH:${TOOLCHAIN_INSTALL_DIR}>")
 	endforeach()
 	
 	# If no install targets set, default to "install"
@@ -31,7 +31,7 @@ function(AddProject name)
 	set(PROJ_VERSION "${${uname}_VERSION}")
 	set(PROJ_SOURCE_DIR "${TOOLCHAIN_SRC_ROOT}/${name}-${PROJ_VERSION}")
 	set(PROJ_BINARY_DIR "${TOOLCHAIN_BUILD_ROOT}/${name}-${PROJ_VERSION}")
-	set(PROJ_CONFIG_ARGS --prefix=${TOOLCHAIN_INSTALL_DIR} ${CONFIGURE_LIBS} ${OPT_CONFIGURE_ARGS})
+	set(PROJ_CONFIG_ARGS --prefix=$<SHELL_PATH:${TOOLCHAIN_INSTALL_DIR}> ${CONFIGURE_LIBS} ${OPT_CONFIGURE_ARGS})
 	set(PROJ_MAKE_COMMAND "\$(MAKE)" ${OPT_BUILD_TARGETS})
 	set(PROJ_INSTALL_COMMAND "\$(MAKE)" ${OPT_INSTALL_TARGETS})
 	
