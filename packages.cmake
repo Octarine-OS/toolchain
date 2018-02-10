@@ -9,7 +9,7 @@ set(MPC_URL "https://ftp.gnu.org/gnu/mpc/mpc-${MPC_VERSION}.tar.gz")
 set(MPC_HASH MD5=4125404E41E482EC68282A2E687F6C73)
 
 set(MPFR_VERSION 4.0.0)
-set(MPFR_URL "http://www.mpfr.org/mpfr-current/mpfr-${MPFR_VERSION}.tar.gz")
+set(MPFR_URL "http://www.mpfr.org/mpfr-${MPFR_VERSION}/mpfr-${MPFR_VERSION}.tar.gz")
 set(MPFR_HASH MD5=574A8713F1417913ED8C75FE75F56CFC)
 
 set(GMP_VERSION 6.1.2)
